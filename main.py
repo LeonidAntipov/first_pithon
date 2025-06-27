@@ -50,6 +50,22 @@ def do_voise(animal: Animal):
     animal.voice()
 
 
+class Geometric:
+    def __init__(self, a, b,other):
+        self.a = a
+        self.b = b
+        other.b = other
+
+    def __add__(self, other):
+        self.b = other
+        if self.a > 0:
+            res = self.a + self.b + self.b
+            return res
+
+
+
+first = Geometric(5,7, 9)
+
 tom = Cat()
 do_voise(tom)
 
